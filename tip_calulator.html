@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tip Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body style="background-color: #ccccff">
+    <div class="container border border-dark mt-4 rounded" style="  width: 40%;">
+        <div class="media m-1 mt-4 border border-warning" style=" font-family: 'Noto Sans KR' , sans-serif; background-color: #ffcc66">
+            <img src="https://hospitality-school.com/wp-content/uploads/2017/05/waiter-bad-tip.jpg" class="m-2" width="100" height="100">
+            <div class="media-body">
+                <h5 class="mt-4" style="font-size:25px">Tip Calculator</h5>
+                Here is a page that will help you calculate tip, you'd like to give!!
+            </div>
+        </div>
+
+        <div class="m-2" style="  font-size: 18px; font-family: 'Oxygen', sans-serif;">
+            <form name="tip" method="post">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="bill">Enter your Bill</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Rs.</span>
+                            </div>
+                            <input class="form-control form-control-lg" type="number" id="bill" name="bill" required autofocus />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="count">How many of you went to the Restaurant?</label>
+                        <input class="form-control form-control-lg" type="number" id="count" name="count" value="1"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="experience">How was your overall experience of the Restaurant?</label>
+
+                        <select id="experience" name="experience" class="form-control form-control-lg">
+                            <option value="0.2">Excellent (20%)</option>
+                            <option value="0.15">Moderate (15%)</option>
+                            <option value="0.1">Not so good (10%)</option>
+                            <option value="0.05">Real Bad (5%)</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <button class="btn btn-dark btn-outline-primary mb-3"  onclick="calculate_tip()">Calculate Tip</button>
+
+        <button class="btn btn-light btn-outline-dark mb-3" style="float:right"  onClick="window.location.reload()">Clear Content</button>
+
+        <div >
+            <table style="font-size: 15px; font-family: 'Oxygen', sans-serif;" class="table table-dark">
+                <tbody class="mb-4">
+                    <tr id="r1" class="mb-4"></tr>
+
+                    <tr id="r2" class="my-4"></tr>
+
+                    <tr id="r3" class="my-4"></tr>
+
+                    <tr id="r4" class="my-4"></tr>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
